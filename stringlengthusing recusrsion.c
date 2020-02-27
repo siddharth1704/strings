@@ -1,4 +1,4 @@
-//sring length using recursion
+//string length using recursion
 #include<stdio.h>
 
 
