@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int main(){
+ int n,m,i;
+ char *a;                              //pointer for dynamic memory allocation
+ scanf("%d",&n);
+ a=(char*)malloc(sizeof(char)*(n+1)); //creating the dynamic memory
+ getchar();                           //using getchar so that while hitting eneter scanf doesnot take\n in the dynamic memory
+ scanf("%s",a);                       //input in the dynamic memory
+ getchar();
+ scanf("%d",&m);
+ a=(char*)realloc(a,sizeof(char)*(m+n+1));  //increasing the size of dynamic memory
+ getchar();                                       
+ for(i=n;i<(n+m+1);i++)
+  scanf("%c",(a+i));
+ puts(a); 
+}
